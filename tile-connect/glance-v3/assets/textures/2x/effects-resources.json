@@ -3832,27 +3832,6 @@
 					}
 				},
 				{
-					"filename": "texts/japanese/good-ja",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 176,
-						"h": 123
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 176,
-						"h": 123
-					},
-					"frame": {
-						"x": 535,
-						"y": 1217,
-						"w": 176,
-						"h": 123
-					}
-				},
-				{
 					"filename": "texts/japanese/great-ja",
 					"rotated": false,
 					"trimmed": false,
@@ -3867,7 +3846,7 @@
 						"h": 123
 					},
 					"frame": {
-						"x": 713,
+						"x": 535,
 						"y": 1217,
 						"w": 178,
 						"h": 123
@@ -3888,10 +3867,31 @@
 						"h": 123
 					},
 					"frame": {
-						"x": 893,
+						"x": 715,
 						"y": 1217,
 						"w": 328,
 						"h": 123
+					}
+				},
+				{
+					"filename": "texts/japanese/good-ja",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 214,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 214,
+						"h": 124
+					},
+					"frame": {
+						"x": 1045,
+						"y": 1217,
+						"w": 214,
+						"h": 124
 					}
 				},
 				{
@@ -3909,7 +3909,7 @@
 						"h": 126
 					},
 					"frame": {
-						"x": 1223,
+						"x": 1261,
 						"y": 1217,
 						"w": 229,
 						"h": 126
@@ -3930,7 +3930,7 @@
 						"h": 127
 					},
 					"frame": {
-						"x": 1454,
+						"x": 1492,
 						"y": 1217,
 						"w": 124,
 						"h": 127
@@ -4194,6 +4194,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:4eb49656605f28a377a5dda69197796c:875700d43f48cc3f46bf34a8654a429e:0e554d0a20193f8e0b06bdb704999cfa$"
+		"smartupdate": "$TexturePacker:SmartUpdate:6454a13ea609ccb85774ac333421f37e:fa465bed057fc4e0b3cff962e5fdc2ae:0e554d0a20193f8e0b06bdb704999cfa$"
 	}
 }
