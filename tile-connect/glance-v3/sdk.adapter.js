@@ -167,23 +167,17 @@ function processAdsClose() {
     if (window._triggerReason === 'replay') {
         window.replayInstance = null
 
-        // ? Flow for old glance sdk
-        if (!window.__GLANCE_ENV.GLANCE_SDK_V3) {
-            window.handleNextLevel()
-        }
+        window.handleNextLevel()
     } else if (window._triggerReason === 'reward') {
         // If user close ad while getting a reward
         window._triggerReason = ''
         window.rewardInstance = null
 
-        // ? Flow for old glance sdk
-        if (!window.__GLANCE_ENV.GLANCE_SDK_V3) {
-            if (!window.isRewardGranted && window.isRewardedAdClosedByUser) {
-                window.handleRewardedFail()
-            } else {
-                // ? Glance must when reward ad show failed, will be rewarded
-                window.handleRewardedSuccess()
-            }
+        if (!window.isRewardGranted && window.isRewardedAdClosedByUser) {
+            window.handleRewardedFail()
+        } else {
+            // ? Glance must when reward ad show failed, will be rewarded
+            window.handleRewardedSuccess()
         }
     }
 }
@@ -275,7 +269,22 @@ function getAdsAsync(isRewardedAds) {
         showAsync: function showAsync() {
             return new Promise((resolve, reject) => {
                 if (this.isRewarded) {
-                    window.handleRewardedFail = reject
+                    window.handleRewardedFail = () => {
+                        if (
+                            window.GameCore &&
+                            !window.isRewardGranted &&
+                            window.isRewardedAdClosedByUser
+                        ) {
+                            const error = new window.GameCore.Ads.AdError(
+                                'USER_INPUT',
+                                'User close rewarded ad'
+                            )
+                            reject(error)
+                            return
+                        }
+
+                        reject()
+                    }
                     window.handleRewardedSuccess = resolve
 
                     showRewardedAd()
