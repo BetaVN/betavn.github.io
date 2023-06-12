@@ -275,7 +275,23 @@ function getAdsAsync(isRewardedAds) {
         showAsync: function showAsync() {
             return new Promise((resolve, reject) => {
                 if (this.isRewarded) {
-                    window.handleRewardedFail = reject
+                    window.handleRewardedFail = () => {
+                        if (
+                            window.GameCore &&
+                            !window.isRewardGranted &&
+                            window.isRewardedAdClosedByUser
+                        ) {
+                            const error = new window.GameCore.Ads.AdError(
+                                'USER_INPUT',
+                                'User close rewarded ad'
+                            )
+
+                            reject(error)
+                            return
+                        }
+
+                        reject()
+                    }
                     window.handleRewardedSuccess = resolve
 
                     showRewardedAd()
