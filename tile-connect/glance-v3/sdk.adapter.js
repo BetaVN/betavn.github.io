@@ -141,10 +141,14 @@ function listensAdEvents(obj) {
             window.isRewardedAdClosedByUser = true
         }
 
-        processAdsClose()
-
-        window.isRewardGranted = false
-        window.isRewardedAdClosedByUser = false
+        try {
+            processAdsClose()
+        } catch (e) {
+            console.error('processAdsClose error', e)
+        } finally {
+            window.isRewardGranted = false
+            window.isRewardedAdClosedByUser = false
+        }
     })
 
     obj.adInstance?.registerCallback('onAdClicked', (data) => {
@@ -184,6 +188,13 @@ function processAdsClose() {
                 // ? Glance must when reward ad show failed, will be rewarded
                 window.handleRewardedSuccess()
             }
+
+            return
+        }
+
+        if (!window.isRewardGranted && window.isRewardedAdClosedByUser && window.GameCore) {
+            const error = new window.GameCore.Ads.AdError('USER_INPUT', 'User cancelled the ads.')
+            throw error
         }
     }
 }
