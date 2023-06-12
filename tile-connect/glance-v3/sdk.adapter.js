@@ -167,17 +167,21 @@ function processAdsClose() {
     if (window._triggerReason === 'replay') {
         window.replayInstance = null
 
-        window.handleNextLevel()
+        if (!window.__GLANCE_ENV.GLANCE_SDK_V3) {
+            window.handleNextLevel()
+        }
     } else if (window._triggerReason === 'reward') {
         // If user close ad while getting a reward
         window._triggerReason = ''
         window.rewardInstance = null
 
-        if (!window.isRewardGranted && window.isRewardedAdClosedByUser) {
-            window.handleRewardedFail()
-        } else {
-            // ? Glance must when reward ad show failed, will be rewarded
-            window.handleRewardedSuccess()
+        if (!window.__GLANCE_ENV.GLANCE_SDK_V3) {
+            if (!window.isRewardGranted && window.isRewardedAdClosedByUser) {
+                window.handleRewardedFail()
+            } else {
+                // ? Glance must when reward ad show failed, will be rewarded
+                window.handleRewardedSuccess()
+            }
         }
     }
 }
