@@ -33,12 +33,13 @@ var ad_replay_load_reject = null
 var leaderboard_callback = null
 
 // ? Backup original function
-var originReplayEvent = window.replayGameEvent
+var originReplayEvent = window.replayEvent
 
 // ! Overwrite replayEvent for custom flow of Leaderboard.
 // ? Why overwrite: this function is call directly from Leaderboard.js, can't be make other function to call it.
 // * Because: the original flow conflict with ads flow of ads plugin.
-window.replayGameEvent = function () {
+window.replayEvent = function () {
+    // ! Temporarily disable on v2 final 1.0.0
     // If leaderboard is open, close it, and show replay ad after leaderboard is closed
     if (leaderboard_callback) {
         console.log('Leaderboard is open, close it and show replay ad after leaderboard is closed')
@@ -167,23 +168,17 @@ function processAdsClose() {
     if (window._triggerReason === 'replay') {
         window.replayInstance = null
 
-        // ? Flow for old glance sdk
-        if (!window.__GLANCE_ENV.GLANCE_SDK_V3) {
-            window.handleNextLevel()
-        }
+        window.handleNextLevel()
     } else if (window._triggerReason === 'reward') {
         // If user close ad while getting a reward
         window._triggerReason = ''
         window.rewardInstance = null
 
-        // ? Flow for old glance sdk
-        if (!window.__GLANCE_ENV.GLANCE_SDK_V3) {
-            if (!window.isRewardGranted && window.isRewardedAdClosedByUser) {
-                window.handleRewardedFail()
-            } else {
-                // ? Glance must when reward ad show failed, will be rewarded
-                window.handleRewardedSuccess()
-            }
+        if (!window.isRewardGranted && window.isRewardedAdClosedByUser) {
+            window.handleRewardedFail()
+        } else {
+            // ? Glance must when reward ad show failed, will be rewarded
+            window.handleRewardedSuccess()
         }
     }
 }
@@ -285,7 +280,6 @@ function getAdsAsync(isRewardedAds) {
                                 'USER_INPUT',
                                 'User close rewarded ad'
                             )
-
                             reject(error)
                             return
                         }
@@ -307,6 +301,7 @@ function getAdsAsync(isRewardedAds) {
     })
 }
 
+//? https://glanceinmobi.atlassian.net/wiki/spaces/GSC/pages/815628362/Game+requirements+and+performance
 // ? Global functions for Glance
 window.pauseEvent = function pauseEvent() {
     console.warn('pauseEvent: method is not implemented')
@@ -316,17 +311,21 @@ window.resumeEvent = function resumeEvent() {
     console.warn('resumeEvent: method is not implemented')
 }
 
-// window.replayEvent = function replayEvent() {
-//     console.warn('replayEvent: method is not implemented')
-// }
-
-// ? Global functions for Endless mode
-window.nextLevelEvent = function nextLevelEvent() {
-    console.warn('nextLevelEvent: method is not implemented')
+window.replayGameEvent = function replayGameEvent() {
+    console.warn('replayGameEvent: method is not implemented')
 }
 
 window.gotoHomeEvent = function gotoHomeEvent() {
     console.warn('gotoHomeEvent: method is not implemented')
+}
+
+// ? Global functions for Level Game mode
+window.nextLevelEvent = function nextLevelEvent() {
+    console.warn('nextLevelEvent: method is not implemented')
+}
+
+window.gotoLevel = function gotoLevel(_level) {
+    console.warn('gotoLevel: method is not implemented')
 }
 
 // ? Global functions for callback from analytics
@@ -340,10 +339,6 @@ window.handleRewardedFail = function handleRewardedFail() {
 
 window.handleRewardedSuccess = function handleRewardedSuccess() {
     console.warn('handleRewardedSuccess: method is not implemented')
-}
-
-window.gotoLevel = function gotoLevel(_level) {
-    console.warn('gotoLevel: method is not implemented')
 }
 
 window.enableSound = function enableSound(_enable) {
@@ -727,8 +722,8 @@ const sdkFakeFBInstant = {
     getLocale: function getLocale() {
         var queryString = FBUtils.getQueryString()
         let langCode = window.__GAME_LANGUAGE || 'en'
-        if (queryString.lang) {
-            langCode = queryString.lang
+        if (queryString.hl && queryString.hl.length > 0) {
+            langCode = queryString.hl[0]
         }
         console.log({ langCode })
         return langCode + '_VN'
@@ -786,9 +781,39 @@ const sdkFakeFBInstant = {
             // stylesheet.rel = 'stylesheet';
             // stylesheet.type = 'text/css';
             // document.head.appendChild(stylesheet);
-            FBUtils.log('initializeAsync')
-            sdkFakeFBInstant.__mockState.initialized = true
-            resolve()
+
+            const maximumTimeWait = 5000
+            const startTime = Date.now()
+
+            const waitForAdSDKLoaded = setInterval(function waitAdInterval() {
+                const currentTime = Date.now()
+                if (currentTime - startTime < maximumTimeWait) {
+                    if (!window.isAdSDKLoaded) return
+
+                    if (window.GlanceGamingAdInterface) {
+                        //? load success, validate if library initialized
+                        if (!window.GlanceGamingAdInterface.isLibraryInitialized) return
+                        if (!window.GlanceGamingAdInterface.isLibraryInitialized()) return
+                        if (!window.GlanceGamingAdInterface.showStickyBannerAd) return
+                        if (!window.GlanceGamingAdInterface.loadRewardedAd) return
+                    } else {
+                        // load failed
+                        // continue to the game.
+                    }
+                } else {
+                    // maximum time waiting -> slow internet
+                    //? if ads is disable -> they will response quickly
+                    console.log('maximum time wait for the ad sdk loading')
+                }
+
+                //? slow load ad sdk -> force isAdSDKLoaded failed
+                window.isAdSDKLoaded = true
+
+                FBUtils.log('initializeAsync')
+                sdkFakeFBInstant.__mockState.initialized = true
+                clearInterval(waitForAdSDKLoaded)
+                resolve()
+            })
         })
     },
     setLoadingProgress: function setLoadingProgress(percentage) {
@@ -988,6 +1013,7 @@ const sdkFakeFBInstant = {
     /**
      * Remember to call hideLeaderBoard in replayCallback
      */
+    // ! Temporarily disable on v2 final 1.0.0
     showLeaderBoard: function showLeaderBoard(score, replayCallback) {
         leaderboard_callback = replayCallback
         return window.showLeaderBoard(score)
@@ -998,7 +1024,8 @@ const sdkFakeFBInstant = {
     getRewardedVideoAsync: function getRewardedVideoAsync(_placementId) {
         return getAdsAsync(true)
     },
-    getInterstitialAdAsync: function getInterstitialAdAsync(_placementID) {
+
+    getInterstitialAdAsync: function getInterstitialAdAsync(placementID) {
         return getAdsAsync(false)
     },
 }

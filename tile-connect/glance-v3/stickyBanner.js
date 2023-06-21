@@ -1,5 +1,7 @@
 //This function will ad the stickyBanner UI
 function addStickyBanner() {
+    if (document.getElementById('bannerOverlay') != undefined) return
+
     var stickyBannerDiv = `<div id="bannerOverlay">
                             <div id="banner-ad">
             

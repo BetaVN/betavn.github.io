@@ -5,41 +5,18 @@ const publisherName = window.__GLANCE_ENV.PUBLISHER_NAME
 const pageName = `${gameName}_${publisherName}`
 const categoryName = publisherName
 const baseAdUnitName = `${publisherName}_${gameName}`
-const gameInput = {
-    gameName,
-    publisherName,
-}
 
-function successCb() {
-    console.log('set up lib success')
-    window.showBumperAd()
+const gameInput = { gameName, publisherName }
+window.gameInput = gameInput
 
-    window.__glanceAdsSDKInitiated = true
-}
-
-function failCb(reason) {
-    console.log('set up lib failed', reason)
-
-    window.__glanceAdsSDKInitiated = true
-}
-
-window.__glanceAdsSDKInitiated = false
-
-// * this script make adtags firing two times?
-$.getScript('https://g.glance-cdn.com/public/content/games/xiaomi/gamesAd.js')
+//loading scripts
+$.getScript('https://g.glance-cdn.com/public/content/games/xiaomi/gamesAd.js', 'gpid.js')
     .done(function (script, textStatus) {
-        if (!window.GlanceGamingAdInterface) {
-            window.__glanceAdsSDKInitiated = true
-            return
-        }
-
-        console.log('MLIB load: ', textStatus)
+        console.log(textStatus)
         window.GlanceGamingAdInterface.setupLibrary(gameInput, successCb, failCb)
     })
     .fail(function (jqxhr, settings, exception) {
-        console.warn('MLIB load failed, reason: ', { jqxhr, settings, exception })
-
-        window.__glanceAdsSDKInitiated = true
+        console.log('MLIB load failed, reason : ', exception)
     })
 
 var LPBannerInstance,
@@ -53,11 +30,9 @@ var is_replay_noFill = false
 var is_rewarded_noFill = false
 var isRewardGranted = false
 var isRewardedAdClosedByUser = false
-// Objects for different ad format.
 
-//? override sdk
+// Objects for different ad format.
 const LPMercObj = {
-    // Position: Top or Bottom,
     adUnitName: `${baseAdUnitName}_Gameload_Top`,
     pageName, //Game Name
     categoryName, //Publisher Name
@@ -71,7 +46,6 @@ const LPMercObj = {
 }
 window.LPMercObj = LPMercObj
 
-//? override sdk
 const StickyObj = {
     adUnitName: `${baseAdUnitName}_Ingame_Bottom`,
     pageName, //Game Name
@@ -86,7 +60,6 @@ const StickyObj = {
 }
 window.StickyObj = StickyObj
 
-//? override sdk
 const LBBannerObj = {
     adUnitName: `${baseAdUnitName}_Leaderboard_Bottom`,
     pageName, //Game Name
@@ -101,7 +74,21 @@ const LBBannerObj = {
 }
 window.LBBannerObj = LBBannerObj
 
-//? override sdk
+function successCb() {
+    console.log('set up lib success')
+    window.showBumperAd()
+
+    window.isAdSDKLoaded = true
+}
+
+function failCb(reason) {
+    console.log('set up lib failed', reason)
+
+    window.isAdSDKLoaded = true
+}
+
+window.isAdSDKLoaded = false
+
 const replayObj = {
     adUnitName: `${baseAdUnitName}_FsReplay_Replay`,
     placementName: 'FsReplay',
@@ -116,7 +103,6 @@ const replayObj = {
 }
 window.replayObj = replayObj
 
-//? override sdk
 const rewardObj = {
     adUnitName: `${baseAdUnitName}_FsRewarded_Rewarded`,
     placementName: 'FsRewarded',
@@ -155,7 +141,7 @@ function bannerCallbacks(obj) {
         console.log('onAdDisplayed  CALLBACK', data)
     })
 }
-
+// rewarded ad callbacks
 function rewardedCallbacks(obj) {
     obj.adInstance?.registerCallback('onAdLoadSucceed', (data) => {
         console.log('onAdLoadSucceeded Rewarded CALLBACK', data)
@@ -204,10 +190,8 @@ function rewardedCallbacks(obj) {
         }
     })
 }
-
 // function to be called after ad closes
 function runOnAdClosed() {
-    if (!window.GlanceGamingAdInterface) return
     if (_triggerReason === 'replay') {
         // call game function for replay
         _triggerReason = ''
@@ -252,7 +236,9 @@ function showGame() {
     } else {
         $('#playMore').css('display', 'none')
         //? override sdk because crash if no sdk leaderboard show after being called after show replay ad
-        LBBannerInstance?.destroyAd()
+        if (LBBannerInstance) {
+            LBBannerInstance.destroyAd()
+        }
         $('#div-gpt-ad-1').html('')
     }
 }
