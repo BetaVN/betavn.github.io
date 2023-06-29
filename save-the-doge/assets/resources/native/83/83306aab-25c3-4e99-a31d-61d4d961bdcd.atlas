@@ -1,0 +1,167 @@
+
+goutou.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_tou
+  rotate: false
+  xy: 493, 89
+  size: 122, 123
+  orig: 122, 123
+  offset: 0, 0
+  index: -1
+3_youdi
+  rotate: false
+  xy: 804, 302
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+3_zuibabizi
+  rotate: false
+  xy: 804, 336
+  size: 49, 29
+  orig: 49, 29
+  offset: 0, 0
+  index: -1
+3_zuodi
+  rotate: false
+  xy: 983, 447
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+4_tou
+  rotate: false
+  xy: 679, 283
+  size: 123, 115
+  orig: 123, 115
+  offset: 0, 0
+  index: -1
+4_zuiba
+  rotate: false
+  xy: 931, 419
+  size: 49, 27
+  orig: 49, 27
+  offset: 0, 0
+  index: -1
+5_mazi
+  rotate: false
+  xy: 493, 30
+  size: 49, 9
+  orig: 49, 9
+  offset: 0, 0
+  index: -1
+5_xiaozui
+  rotate: false
+  xy: 931, 481
+  size: 77, 29
+  orig: 77, 29
+  offset: 0, 0
+  index: -1
+beiding_zui
+  rotate: true
+  xy: 617, 110
+  size: 51, 28
+  orig: 51, 28
+  offset: 0, 0
+  index: -1
+caidai
+  rotate: false
+  xy: 493, 400
+  size: 436, 110
+  orig: 436, 110
+  offset: 0, 0
+  index: -1
+da_bizi
+  rotate: false
+  xy: 982, 418
+  size: 35, 27
+  orig: 35, 27
+  offset: 0, 0
+  index: -1
+da_mazi
+  rotate: false
+  xy: 2, 6
+  size: 76, 15
+  orig: 76, 15
+  offset: 0, 0
+  index: -1
+da_tou
+  rotate: false
+  xy: 493, 214
+  size: 184, 184
+  orig: 184, 184
+  offset: 0, 0
+  index: -1
+da_youbai
+  rotate: false
+  xy: 931, 448
+  size: 50, 31
+  orig: 50, 31
+  offset: 0, 0
+  index: -1
+da_youer
+  rotate: false
+  xy: 617, 163
+  size: 45, 49
+  orig: 45, 49
+  offset: 0, 0
+  index: -1
+da_youyan
+  rotate: false
+  xy: 724, 256
+  size: 54, 25
+  orig: 54, 25
+  offset: 0, 0
+  index: -1
+da_youzhu
+  rotate: true
+  xy: 80, 2
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+da_zui
+  rotate: false
+  xy: 493, 41
+  size: 121, 46
+  orig: 121, 46
+  offset: 0, 0
+  index: -1
+da_zuobai
+  rotate: false
+  xy: 804, 367
+  size: 51, 31
+  orig: 51, 31
+  offset: 0, 0
+  index: -1
+da_zuoer
+  rotate: false
+  xy: 679, 235
+  size: 43, 46
+  orig: 43, 46
+  offset: 0, 0
+  index: -1
+da_zuoyan
+  rotate: false
+  xy: 857, 373
+  size: 53, 25
+  orig: 53, 25
+  offset: 0, 0
+  index: -1
+da_zuozhu
+  rotate: true
+  xy: 102, 2
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+guang2
+  rotate: false
+  xy: 2, 23
+  size: 489, 487
+  orig: 489, 487
+  offset: 0, 0
+  index: -1

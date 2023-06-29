@@ -1,0 +1,20 @@
+
+feng.png
+size: 16,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fen2
+  rotate: false
+  xy: 2, 2
+  size: 1, 44
+  orig: 1, 44
+  offset: 0, 0
+  index: -1
+piaodai
+  rotate: false
+  xy: 5, 10
+  size: 6, 36
+  orig: 6, 36
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,55 @@
+
+qiqiu.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+22
+  rotate: true
+  xy: 2, 2
+  size: 6, 121
+  orig: 6, 121
+  offset: 0, 0
+  index: -1
+lanqiu
+  rotate: true
+  xy: 143, 31
+  size: 82, 122
+  orig: 82, 122
+  offset: 0, 0
+  index: -1
+suipian1
+  rotate: false
+  xy: 305, 39
+  size: 63, 35
+  orig: 63, 35
+  offset: 0, 0
+  index: -1
+suipian2
+  rotate: false
+  xy: 374, 79
+  size: 41, 34
+  orig: 41, 34
+  offset: 0, 0
+  index: -1
+suipian3
+  rotate: false
+  xy: 267, 38
+  size: 36, 75
+  orig: 36, 75
+  offset: 0, 0
+  index: -1
+suipian4
+  rotate: false
+  xy: 305, 76
+  size: 67, 37
+  orig: 67, 37
+  offset: 0, 0
+  index: -1
+xiaoguo
+  rotate: false
+  xy: 2, 10
+  size: 139, 103
+  orig: 139, 103
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,83 @@
+
+mifeng.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+liekai1
+  rotate: true
+  xy: 649, 91
+  size: 21, 36
+  orig: 21, 36
+  offset: 0, 0
+  index: -1
+liekai2
+  rotate: true
+  xy: 604, 67
+  size: 21, 38
+  orig: 21, 38
+  offset: 0, 0
+  index: -1
+shangchi
+  rotate: false
+  xy: 687, 91
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 604, 90
+  size: 43, 22
+  orig: 43, 22
+  offset: 0, 0
+  index: -1
+xiachi
+  rotate: true
+  xy: 141, 2
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+yanwu1
+  rotate: false
+  xy: 269, 28
+  size: 92, 84
+  orig: 92, 84
+  offset: 0, 0
+  index: -1
+yanwu2
+  rotate: false
+  xy: 538, 51
+  size: 64, 61
+  orig: 64, 61
+  offset: 0, 0
+  index: -1
+yanwu3
+  rotate: false
+  xy: 453, 34
+  size: 83, 78
+  orig: 83, 78
+  offset: 0, 0
+  index: -1
+yanwu4
+  rotate: false
+  xy: 141, 21
+  size: 126, 91
+  orig: 126, 91
+  offset: 0, 0
+  index: -1
+yanwu5
+  rotate: false
+  xy: 363, 33
+  size: 88, 79
+  orig: 88, 79
+  offset: 0, 0
+  index: -1
+yanwu6
+  rotate: false
+  xy: 2, 2
+  size: 137, 110
+  orig: 137, 110
+  offset: 0, 0
+  index: -1
