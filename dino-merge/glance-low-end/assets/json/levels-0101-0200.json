@@ -1,0 +1,604 @@
+{
+	"levels": [
+		{
+			"level_id": 101,
+			"enemy_row1": "r2-r8-r9-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 102,
+			"enemy_row1": "0-r4-r9-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 103,
+			"enemy_row1": "r3-r8-r9-r4-r2",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 104,
+			"enemy_row1": "0-r5-0-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-0-m8-0"
+		},
+		{
+			"level_id": 105,
+			"enemy_row1": "0-r3-r5-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-0-m8-0"
+		},
+		{
+			"level_id": 106,
+			"enemy_row1": "r2-r5-r9-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 107,
+			"enemy_row1": "r2-r4-r8-r3-0",
+			"enemy_row2": "0-0-r5-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 108,
+			"enemy_row1": "0-r6-0-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-0-m8-0"
+		},
+		{
+			"level_id": 109,
+			"enemy_row1": "r2-r4-r8-r3-0",
+			"enemy_row2": "0-0-r6-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 110,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "m5-r8-r9-m6-r2",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 111,
+			"enemy_row1": "r2-r5-r8-r3-0",
+			"enemy_row2": "0-0-r6-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 112,
+			"enemy_row1": "r2-r5-r6-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-0-m8-0"
+		},
+		{
+			"level_id": 113,
+			"enemy_row1": "r3-r5-r6-r4-r2",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-0-m8-0"
+		},
+		{
+			"level_id": 114,
+			"enemy_row1": "r2-r8-r9-r7-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 115,
+			"enemy_row1": "0-r3-r8-r2-0",
+			"enemy_row2": "0-0-r7-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 116,
+			"enemy_row1": "r2-r7-r9-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 117,
+			"enemy_row1": "r2-r4-r8-r3-0",
+			"enemy_row2": "0-0-r7-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 118,
+			"enemy_row1": "r2-r7-r9-r5-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 119,
+			"enemy_row1": "r5-r8-r9-r7-r4",
+			"enemy_row2": "0-r3-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 120,
+			"enemy_row1": "0-r6-0-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m8-m9-m7-0"
+		},
+		{
+			"level_id": 121,
+			"enemy_row1": "r6-r8-r9-r7-r3",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 122,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "m6-r8-r9-m7-r4",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 123,
+			"enemy_row1": "r2-r4-r6-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m8-m9-m7-0"
+		},
+		{
+			"level_id": 124,
+			"enemy_row1": "r6-r8-r9-r7-r5",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 125,
+			"enemy_row1": "r6-r8-r9-r7-r5",
+			"enemy_row2": "0-r3-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 126,
+			"enemy_row1": "r6-r8-r9-r7-r5",
+			"enemy_row2": "0-r4-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 127,
+			"enemy_row1": "r5-r7-r9-r6-r4",
+			"enemy_row2": "0-r3-0-r2-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 128,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m2-0"
+		},
+		{
+			"level_id": 129,
+			"enemy_row1": "r2-r4-r10-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 130,
+			"enemy_row1": "0-0-r5-0-0",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 131,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m5-m10-m3-0"
+		},
+		{
+			"level_id": 132,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "m2-r5-r10-m4-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 133,
+			"enemy_row1": "0-r3-r5-r2-0",
+			"enemy_row2": "0-0-r4-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 134,
+			"enemy_row1": "0-r6-r10-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 135,
+			"enemy_row1": "0-r6-0-r2-0",
+			"enemy_row2": "0-0-r3-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 136,
+			"enemy_row1": "0-r6-0-r2-0",
+			"enemy_row2": "0-0-r4-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 137,
+			"enemy_row1": "r2-r4-r10-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m6-0-0"
+		},
+		{
+			"level_id": 138,
+			"enemy_row1": "r2-r6-r10-r5-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 139,
+			"enemy_row1": "r2-r4-r5-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m6-0"
+		},
+		{
+			"level_id": 140,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m7-0"
+		},
+		{
+			"level_id": 141,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m7-m10-m3-0"
+		},
+		{
+			"level_id": 142,
+			"enemy_row1": "r2-r7-r10-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 143,
+			"enemy_row1": "0-r3-r7-r2-0",
+			"enemy_row2": "0-0-r4-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 144,
+			"enemy_row1": "0-r7-0-r2-0",
+			"enemy_row2": "0-0-r5-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 145,
+			"enemy_row1": "r3-r7-r10-r5-r2",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 146,
+			"enemy_row1": "r2-r5-r10-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m7-0-0"
+		},
+		{
+			"level_id": 147,
+			"enemy_row1": "r2-r4-r7-r3-0",
+			"enemy_row2": "0-0-r5-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 148,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "m2-r7-r10-m6-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 149,
+			"enemy_row1": "r4-r7-r10-r6-r3",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 150,
+			"enemy_row1": "0-r5-r6-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m7-0"
+		},
+		{
+			"level_id": 151,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "m5-r7-r10-m6-r4",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 152,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m8-0"
+		},
+		{
+			"level_id": 153,
+			"enemy_row1": "0-r8-0-r2-0",
+			"enemy_row2": "0-0-r4-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 154,
+			"enemy_row1": "0-r5-r10-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 155,
+			"enemy_row1": "r2-r5-r10-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 156,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m8-m10-m6-0"
+		},
+		{
+			"level_id": 157,
+			"enemy_row1": "r2-r6-r10-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 158,
+			"enemy_row1": "0-r5-0-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m8-m10-m6-0"
+		},
+		{
+			"level_id": 159,
+			"enemy_row1": "r3-r5-r8-r4-r2",
+			"enemy_row2": "0-0-r6-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 160,
+			"enemy_row1": "r2-r7-r10-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m8-0-0"
+		},
+		{
+			"level_id": 161,
+			"enemy_row1": "r4-r8-r10-r7-r3",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 162,
+			"enemy_row1": "r2-r5-r8-r3-0",
+			"enemy_row2": "0-0-r7-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 163,
+			"enemy_row1": "r5-r8-r10-r7-r4",
+			"enemy_row2": "0-r3-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 164,
+			"enemy_row1": "0-r3-r6-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m8-m10-m7-0"
+		},
+		{
+			"level_id": 165,
+			"enemy_row1": "0-r3-0-r2-0",
+			"enemy_row2": "m6-r8-r10-m7-r4",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 166,
+			"enemy_row1": "r6-r8-r10-r7-r5",
+			"enemy_row2": "0-r3-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 167,
+			"enemy_row1": "r6-r8-r10-r7-r5",
+			"enemy_row2": "0-r3-r4-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 168,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "m2-r9-r10-m3-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 169,
+			"enemy_row1": "r2-r9-r10-r5-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 170,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "m4-r9-r10-m5-r2",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 171,
+			"enemy_row1": "0-r6-0-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m9-0"
+		},
+		{
+			"level_id": 172,
+			"enemy_row1": "0-r4-0-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-m10-m6-0"
+		},
+		{
+			"level_id": 173,
+			"enemy_row1": "r2-r6-r10-r5-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 174,
+			"enemy_row1": "r5-r9-r10-r6-r4",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 175,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-m10-m7-0"
+		},
+		{
+			"level_id": 176,
+			"enemy_row1": "0-r4-r7-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m9-0"
+		},
+		{
+			"level_id": 177,
+			"enemy_row1": "r2-r7-r10-r5-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 178,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "m5-r9-r10-m7-r4",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 179,
+			"enemy_row1": "r6-r9-r10-r7-r3",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 180,
+			"enemy_row1": "r2-r4-r6-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-m10-m7-0"
+		},
+		{
+			"level_id": 181,
+			"enemy_row1": "r2-r5-r6-r3-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-m10-m7-0"
+		},
+		{
+			"level_id": 182,
+			"enemy_row1": "0-r3-r4-r2-0",
+			"enemy_row2": "m6-r9-r10-m7-r5",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 183,
+			"enemy_row1": "0-r3-r8-r2-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m9-0"
+		},
+		{
+			"level_id": 184,
+			"enemy_row1": "r3-r8-r10-r4-r2",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-0-m9-0-0"
+		},
+		{
+			"level_id": 185,
+			"enemy_row1": "r2-r5-r9-r3-0",
+			"enemy_row2": "0-0-r8-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 186,
+			"enemy_row1": "r3-r5-r9-r4-r2",
+			"enemy_row2": "0-0-r8-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 187,
+			"enemy_row1": "r6-r9-r10-r8-r3",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 188,
+			"enemy_row1": "r6-r9-r10-r8-r4",
+			"enemy_row2": "0-r3-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 189,
+			"enemy_row1": "r6-r9-r10-r8-r5",
+			"enemy_row2": "0-r4-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 190,
+			"enemy_row1": "0-r7-r9-r2-0",
+			"enemy_row2": "0-0-r8-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 191,
+			"enemy_row1": "r7-r9-r10-r8-r4",
+			"enemy_row2": "0-0-r2-0-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 192,
+			"enemy_row1": "r2-r7-r9-r5-0",
+			"enemy_row2": "0-0-r8-0-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 193,
+			"enemy_row1": "r2-r5-r7-r4-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m9-m10-m8-0"
+		},
+		{
+			"level_id": 194,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "m7-r9-r10-m8-r6",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 195,
+			"enemy_row1": "r7-r9-r10-r8-r6",
+			"enemy_row2": "0-r4-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 196,
+			"enemy_row1": "r5-r7-r8-r6-r2",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m10-0-m9-0"
+		},
+		{
+			"level_id": 197,
+			"enemy_row1": "r5-r7-r9-r6-r4",
+			"enemy_row2": "0-r8-0-r2-0",
+			"enemy_row3": "0-0-m10-0-0"
+		},
+		{
+			"level_id": 198,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "0-r11-0-r2-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 199,
+			"enemy_row1": "0-0-0-0-0",
+			"enemy_row2": "m2-r4-r11-m3-0",
+			"enemy_row3": "0-0-0-0-0"
+		},
+		{
+			"level_id": 200,
+			"enemy_row1": "0-0-r2-0-0",
+			"enemy_row2": "0-0-0-0-0",
+			"enemy_row3": "0-m5-m11-m3-0"
+		}
+	]
+}
