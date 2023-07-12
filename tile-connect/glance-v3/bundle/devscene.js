@@ -1,1 +1,0 @@
-import{B as e}from"./game.js";import"./engine.js";class a extends e{preload(){this.events.on("wake",this.run),this.events.once("create",this.run)}create(){super.create()}run=()=>{}}export{a as default};
